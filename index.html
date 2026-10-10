@@ -1,0 +1,331 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport
+      content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+    <title>Spark Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <header class="nav">
+      <div class="wrap">
+        <a class="logo" href="#top" aria-label="Spark Vault home">
+          <span class="logo-mark"><svg viewBox="0 0 16 16" fill="none"><path
+                d="M9 1 3 9h4l-1 6 6-8H8l1-6Z"
+                fill="currentColor" /></svg></span>
+          Spark Vault
+        </a>
+        <nav class="nav-links">
+          <a href="#library">Library</a>
+          <a href="#process" class="hide-sm">Process</a>
+          <a href="#prompts" class="hide-sm">Prompts</a>
+          <a class="btn-outline"
+            href="https://www.youtube.com/watch?v=IYNAyRkUsjI" target="_blank"
+            rel="noopener">Watch video</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap">
+        <div class="eyebrow"><span class="dot"></span><span id="total">0
+            resources</span><span>·</span><span>10 kinds of
+            inspiration</span></div>
+        <h1>Steal like a <span class="hl">designer.</span></h1>
+        <p class="lede">Every resource from Jack Roberts’ <a
+            href="https://www.youtube.com/watch?v=IYNAyRkUsjI" target="_blank"
+            rel="noopener">15 Claude Design hacks</a>, sorted by the kind of
+          spark it gives you. Each card says what the site is, how the video
+          uses it, and jumps to that moment in the video.</p>
+        <div class="toolbar">
+          <label class="search" for="q">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+              stroke-width="1.6"><circle cx="7" cy="7" r="5" /><path
+                d="m11 11 3.5 3.5" stroke-linecap="round" /></svg>
+            <input id="q" type="search"
+              placeholder="Search fonts, footers, motion, logos…"
+              autocomplete="off" aria-label="Search resources">
+            <span class="kbd" aria-hidden="true">/</span>
+          </label>
+          <button class="btn-lime" id="surprise" type="button">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+              stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round"><path
+                d="M2 4h3l6 8h3M2 12h3l1.5-2M11 4h3M12 2l2 2-2 2M12 10l2 2-2 2" /></svg>
+            Surprise me
+          </button>
+        </div>
+      </section>
+
+      <div class="tabs-wrap" id="library">
+        <div class="wrap"><div class="tabs" role="tablist" id="tabs"
+            aria-label="Inspiration type"></div></div>
+      </div>
+
+      <section class="library wrap" id="groups" aria-live="polite"></section>
+
+      <section class="band" id="process">
+        <div class="wrap">
+          <div class="eyebrow"><span>How to use the vault</span></div>
+          <h2>The brainstorm loop</h2>
+          <p class="band-lede">The order the video works in, from a blank page
+            to a finished design. Run it top to bottom for a new project, or
+            jump to the step where you’re stuck.</p>
+          <ol class="steps">
+            <li class="step"><h3>Collect references</h3><p>Before you prompt,
+                find two or three things you love. Claude copies a reference far
+                better than it follows a description.</p><span
+                class="uses">Savee · Visual Journal · 60fps</span></li>
+            <li class="step"><h3>Lock the brand file</h3><p>Model a great brand
+                guideline and put your colours, type and rules into one file you
+                can hand to any tool.</p><span class="uses">Brand Guidelines ·
+                Rebrand Gallery · Logo System</span></li>
+            <li class="step"><h3>Pick type and icons</h3><p>Fonts are the
+                fastest tell of AI slop. Choose a real typeface and a consistent
+                icon set early.</p><span class="uses">Typewolf · Fonts In Use ·
+                Fontshare · Flaticon</span></li>
+            <li class="step"><h3>Build it section by section</h3><p>Treat the
+                navbar, hero, bento, CTA, footer and 404 as separate pieces.
+                Find the best example of each and combine them.</p><span
+                class="uses">Navbar · CTA · Footer · 404s · Bento
+                Grids</span></li>
+            <li class="step"><h3>Study real flows</h3><p>For apps, look at every
+                screen of the best product in your category before you design
+                your own.</p><span class="uses">Mobbin · Refero</span></li>
+            <li class="step"><h3>Add motion last</h3><p>Hover lifts, soft
+                presses, counters and loops make a design feel expensive. Hand
+                Claude a clip to match.</p><span class="uses">LottieFiles ·
+                Transitions · Motion Primitives</span></li>
+            <li class="step"><h3>Run the design loop</h3><p>Give Claude a
+                gold-standard reference and let a critic agent compare its
+                output against it until they match.</p><span class="uses">Design
+                Loop skill · Higgsfield</span></li>
+            <li class="step"><h3>Simplify and de-slop</h3><p>Check that the page
+                passes a glance test, then strip the AI tells from the copy and
+                tighten every sentence.</p><span class="uses">Don’t Make Me
+                Think · Slop Monster · STE100</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="prompts wrap" id="prompts">
+        <div class="eyebrow"><span>Copy, paste, adapt</span></div>
+        <h2>Prompt starters</h2>
+        <p class="sub">Short prompts based on the examples in the video. Replace
+          the bracketed parts, attach your reference image, and paste into
+          Claude.</p>
+        <div class="prompt-list" id="promptList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>Built from “How to Use Claude Design Better Than 99% of People” by
+          Jack Roberts (Oct 2026).</span>
+        <a href="https://www.youtube.com/watch?v=IYNAyRkUsjI" target="_blank"
+          rel="noopener">Open on YouTube ↗</a>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status"></div>
+
+    <script>
+const VID='https://www.youtube.com/watch?v=IYNAyRkUsjI';
+const GROUPS=[
+ {id:'motion',code:'MOT',name:'Motion & micro-interactions',desc:'Animations, transitions and the small touches (hover lifts, soft presses, counters) that make a design feel premium instead of static.'},
+ {id:'brand',code:'BRD',name:'Brand identity',desc:'How great brands document themselves. Use these to model your own guideline, logo direction and visual identity.'},
+ {id:'mood',code:'MUD',name:'Mood, posters & campaigns',desc:'Visual moodboards for campaign images, posters and art direction. Grab an image and ask Claude to work in that style.'},
+ {id:'decks',code:'DCK',name:'Presentations',desc:'Pitch decks from fast-growing companies, for when you need slides that look designed.'},
+ {id:'type',code:'TYP',name:'Typography',desc:'The quickest upgrade for any AI design. Find what top sites are using, identify a font from a screenshot, or download a free one.'},
+ {id:'icons',code:'ICO',name:'Icons & illustration',desc:'Replace long explanations with a clear icon or illustration in a consistent style.'},
+ {id:'sections',code:'SEC',name:'Website sections',desc:'Galleries of single page parts. Pick the best example of each section and assemble your page from them.'},
+ {id:'flows',code:'FLW',name:'Real app & site flows',desc:'Full screen-by-screen captures of the best products, so you can see how the leaders handle a whole journey.'},
+ {id:'tools',code:'TLS',name:'Tools & skills that make it',desc:'The tools and Claude skills the video uses to turn inspiration into finished images, video, editable posts and polished copy.'},
+ {id:'rules',code:'RUL',name:'Principles & writing rules',desc:'Rules to check your work against: is it simple enough, and does the copy sound like a person wrote it?'},
+ {id:'more',code:'MOR',name:'More collections',desc:'Bigger lists of design sites, for when you have worked through everything above.'}
+];
+const R=[
+ // motion
+ {g:'motion',n:'LottieFiles',u:'https://lottiefiles.com',t:260,w:'A huge library of lightweight animations (success ticks, loaders, emoji, icons), many of them free.',h:'Find one you like, copy its URL and give it to Claude to drop into your design.'},
+ {g:'motion',n:'Transitions.dev',u:'https://transitions.dev',t:290,w:'A collection of crisp, modern UI transitions between states and screens.',h:'Show Claude the transition you want so page changes feel smooth.'},
+ {g:'motion',n:'60fps',u:'https://60fps.design',t:300,w:'Recorded animations from real apps, so you see how the motion actually behaves rather than a still screenshot.',h:'Study how good apps link screens and graphics together, then describe or attach the one to copy.'},
+ {g:'motion',n:'Kinetics',u:'https://kinetics.colorion.co',t:305,w:'A reference for movement: how elements ease, bounce and travel across the screen.',h:'Use it to name the exact feel of motion you want before you prompt.'},
+ {g:'motion',n:'Motion Primitives',u:'https://motion-primitives.com',t:310,w:'A clean set of ready-made animated UI components to copy into your build.',h:'Borrow components for hover effects, text reveals and counters.'},
+ // brand
+ {g:'brand',n:'Brand Guidelines',u:'https://brandguidelines.net',t:360,w:'Real brand guideline documents from companies like Spotify and Adobe.',h:'Tell Claude you like how a brand structures its guideline, and ask for your own with the same structure but unique content.'},
+ {g:'brand',n:'Logo System',u:'https://logosystem.co',t:425,w:'A curated gallery of well-crafted logos and marks.',h:'Copy a few logos into a collage, then ask Claude for nine logo options inspired by them.'},
+ {g:'brand',n:'Rebrand Gallery',u:'https://rebrand.gallery',t:570,w:'Before-and-after rebrands showing complete visual identities.',h:'Feed whole identity systems to Claude to shape a brand that is your own.'},
+ // mood
+ {g:'mood',n:'Visual Journal',u:'https://visualjournal.it',t:525,w:'A collection of beautiful campaign and product imagery.',h:'Copy an image you like and ask Claude to make a version for your brand, using your logo and colours.'},
+ {g:'mood',n:'Savee',u:'https://savee.com',t:1310,w:'A moodboard platform designers use to save and browse visual inspiration, including posters and video.',h:'Grab a poster or clip as the gold standard for the design loop, or ask Claude to recreate its style.'},
+ // decks
+ {g:'decks',n:'Deck Gallery',u:'https://deck.gallery',t:405,w:'Pitch decks from fast-growing brands like Instacart, with slide-by-slide overviews.',h:'Pick a slide style you like and give it to Claude as the reference for your deck.'},
+ // type
+ {g:'type',n:'Typewolf',u:'https://www.typewolf.com',t:920,w:'Shows which fonts are trending on well-designed sites right now, with pairing ideas.',h:'Choose a font for your website text here instead of letting Claude default.'},
+ {g:'type',n:'Fonts In Use',u:'https://fontsinuse.com',t:930,w:'An archive of real typography in branding, posters and products, searchable by typeface.',h:'Copy an image you love and ask Claude for the closest free-license font, with six to nine options.'},
+ {g:'type',n:'WhatTheFont',u:'https://www.myfonts.com/pages/whatthefont',t:970,w:'Upload a screenshot and it identifies the font.',h:'Use it when you spot type you like but can’t name it.'},
+ {g:'type',n:'Fontshare',u:'https://www.fontshare.com',t:975,w:'A library of good-quality fonts that are free to use.',h:'Browse, pick one, and tell Claude to build with it.'},
+ // icons
+ {g:'icons',n:'Flaticon',u:'https://www.flaticon.com',t:990,w:'A very large icon library in many visual styles.',h:'Swap text-heavy claims for clear icons so the page reads at a glance.'},
+ {g:'icons',n:'Icons8',u:'https://icons8.com',t:1010,w:'Icons and illustrations in matching style families.',h:'Illustrate ideas on a site or in an app. Some assets are free with attribution.'},
+ // sections
+ {g:'sections',n:'Navbar Gallery',u:'https://navbar.gallery',t:1050,w:'The best website navigation bars, collected in one place.',h:'Pick the navbar you want and build that section on its own.'},
+ {g:'sections',n:'Footer Design',u:'https://footer.design',t:1060,w:'A gallery of beautiful website footers.',h:'Combine parts of several footers into your ideal one.'},
+ {g:'sections',n:'CTA Gallery',u:'https://cta.gallery',t:1080,w:'Calls to action from real sites, many built to convert.',h:'Use it when you need people to sign up and don’t know what that block should look like.'},
+ {g:'sections',n:'404s Design',u:'https://404s.design',t:1100,w:'Creative 404 error pages. The care a brand puts here signals the care in its product.',h:'Lean on these to make your error page a small brand moment.'},
+ {g:'sections',n:'Unsection',u:'https://unsection.com',t:1130,w:'A broad library of website sections for general layout inspiration.',h:'Browse when you need ideas for any section of a page.'},
+ {g:'sections',n:'Bento Grids',u:'https://bentogrids.com',t:1135,w:'Layouts that split one big block into tiles of images, numbers and dates.',h:'Great for dashboards and feature sections. Find one you like and match it.'},
+ // flows
+ {g:'flows',n:'Mobbin',u:'https://mobbin.com',t:1200,w:'Every screen of top apps and sites (Duolingo, Revolut and more), searchable by category like finance.',h:'Search your category, copy the screens of the leader, and tell Claude what you love about them.'},
+ {g:'flows',n:'Refero',u:'https://refero.design',t:1250,w:'A design reference library with filtering by style, flows and UI patterns.',h:'Open Styles and find sites that match the feel of what you are building.'},
+ // tools
+ {g:'tools',n:'Claude Design',u:'https://claude.ai/',t:0,w:'The design tool everything in the video is built with, running on Opus 5.5.',h:'Give it a reference, your brand and a short brief, rather than a long description.'},
+ {g:'tools',n:'Higgsfield',u:'https://higgsfield.ai',t:478,w:'Image and video generation models you can connect to Claude through MCP or a CLI.',h:'Generate logos, campaign images and 3D-site assets from inside Claude.'},
+ {g:'tools',n:'Linearity',u:'https://www.linearity.co',t:587,w:'An editable canvas, like Claude and Canva combined. Import a brand from its URL, then generate and edit on-brand posts.',h:'Create social posts from your brand system, then move, resize and restyle anything by hand.'},
+ {g:'tools',n:'Design Loop skill',u:'https://www.skool.com/ai-automation-vault/claude-design-10000-websites-no-ai-slop',t:1264,w:'A Claude skill that creates a critic agent to check output against your reference until they match.',h:'Attach a gold-standard design and ask Claude to recreate it with your own text and brand.'},
+ {g:'tools',n:'Slop Monster',u:'https://github.com/ItsssssJack/SlopMonster',t:1605,w:'A free repo that combines the best anti-AI-writing rules, including checks for sales and marketing copy.',h:'Ask Claude to run all your copy through it, or turn it into a skill you can call by name.'},
+ {g:'tools',n:'Free prompt vault',u:'https://bit.ly/3RNNDLa',t:60,w:'Jack’s free pack of the Claude Design prompts and skills used in the video, including the five-agent design check.',h:'Copy a section’s prompt to repeat a hack, like the motion or brand guideline prompt.'},
+ // rules
+ {g:'rules',n:'Don’t Make Me Think',u:'https://sensible.com/dont-make-me-think/',t:1529,w:'Steve Krug’s book on usability. Pages should be understood at a glance, with no effort from the visitor.',h:'Ask for several versions of a design and keep the one that communicates most simply.'},
+ {g:'rules',n:'ASD-STE100',u:'https://www.asd-ste100.org',t:1724,w:'Simplified Technical English from aerospace: about 900 approved words, active voice, one instruction per sentence.',h:'Tell Claude to talk to you in this style and to rewrite your copy to the standard.'},
+ {g:'rules',n:'Five-agent design check',u:'https://bit.ly/3RNNDLa',t:1472,w:'A prompt that runs a design past five specialist agents, each checking something different, before it is approved.',h:'Run it on any finished design as a final review.'},
+ // more
+ {g:'more',n:'Jack’s 40 favourite design sites',u:'https://design-inspo-bay.vercel.app/',t:2040,w:'Jack’s own longer list of the design inspiration sites he uses.',h:'Use it once you have worked through this vault.'},
+ {g:'more',n:'Gallery list by @iamtanzil_',u:'https://x.com/iamtanzil_/status/2106710926145781986',t:1050,w:'A thread collecting design gallery sites, credited in the video description.',h:'Mine it for more section-level galleries.'}
+];
+const PROMPTS=[
+ {t:'Motion from a reference',p:'Here is a reference clip I like [attach], my logo and brand colours [attach]. Build a motion graphic in this style that shows [your idea]. Match the pacing and feel of the reference.'},
+ {t:'Looping animation',p:'Explain [idea] as a looping animation. Give me three style variations, and make sure the first and last frames are identical so it loops cleanly.'},
+ {t:'Premium touches',p:'Make this design feel more premium. Add small touches: hover lifts on cards, soft presses on buttons, and numbers that count up when they come into view.'},
+ {t:'Brand guideline',p:'I love the way [brand] lays out its brand guidelines [attach]. Help me build my own guideline with this exact structure, but make everything unique to [my website].'},
+ {t:'Logo options',p:'I really like these logos [attach collage]. Inspired by them, give me nine logo options for [type of product] that is all about [core idea].'},
+ {t:'Font match',p:'I want to build a landing page. I am inspired by the type in this image [attach]. Find the closest free-license font to this one and show me six options.'},
+ {t:'Recreate a poster',p:'Create an image in the style of this reference [attach], using my own references [attach]. Include this information: [headline, dates, details].'},
+ {t:'Strip the slop',p:'Run all the copy on this page through Slop Monster [repo link]. Keep the meaning, remove the AI tells, and match the copy to the context (poster, website, ad).'},
+ {t:'Plain-English mode',p:'From now on, write to me in ASD-STE100 Simplified Technical English: active voice, one instruction per sentence, short paragraphs. When I ask, rewrite my copy to this standard.'}
+];
+
+const ICON={
+ ext:'<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 2h6v6M10 2 3 9"/></svg>',
+ play:'<svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 2v8l7-4z"/></svg>',
+ star:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m8 1.8 1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6z"/></svg>',
+ starF:'<svg viewBox="0 0 16 16" fill="currentColor"><path d="m8 1.8 1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6z"/></svg>'
+};
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=t=>Math.floor(t/60)+':'+String(t%60).padStart(2,'0');
+const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return u}};
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+// assign ids per group
+const counters={};
+R.forEach(r=>{const g=GROUPS.find(x=>x.id===r.g);counters[r.g]=(counters[r.g]||0)+1;r.id=g.code+'-'+String(counters[r.g]).padStart(2,'0')});
+
+// screenshots published alongside the page in shots/
+const IMG={'LottieFiles':'lottiefiles','Transitions.dev':'transitions','60fps':'60fps','Kinetics':'kinetics','Motion Primitives':'motionprimitives',
+ 'Brand Guidelines':'brandguidelines','Logo System':'logosystem','Rebrand Gallery':'rebrand','Visual Journal':'visualjournal','Savee':'savee','Deck Gallery':'deckgallery',
+ 'Typewolf':'typewolf','Fonts In Use':'fontsinuse','WhatTheFont':'whatthefont','Fontshare':'fontshare','Icons8':'icons8',
+ 'Navbar Gallery':'navbar','Footer Design':'footer','CTA Gallery':'cta','404s Design':'404s','Unsection':'unsection','Bento Grids':'bento',
+ 'Mobbin':'mobbin','Refero':'refero','Claude Design':'claude','Higgsfield':'higgsfield','Design Loop skill':'designloop','Slop Monster':'slopmonster',
+ 'Free prompt vault':'vault','Don’t Make Me Think':'dmmt','ASD-STE100':'ste','Jack’s 40 favourite design sites':'jack40','Gallery list by @iamtanzil_':'tanzil'};
+R.forEach(r=>{r.img=IMG[r.n]});
+
+let saved=new Set(store.get('spark-saved',[]));
+let active=(location.hash||'').slice(1);
+if(!['all','saved',...GROUPS.map(g=>g.id)].includes(active))active=store.get('spark-tab','all');
+let query='';
+
+const $=s=>document.querySelector(s);
+$('#total').textContent=R.length+' resources';
+
+function renderTabs(){
+  const tabs=[{id:'all',name:'All',n:R.length},...GROUPS.map(g=>({id:g.id,name:g.name.split(' & ')[0].replace('Real app','App flows').replace('Tools','Tools').replace('Principles','Principles'),n:R.filter(r=>r.g===g.id).length})),{id:'saved',name:'Saved',n:saved.size}];
+  const short={motion:'Motion',brand:'Brand',mood:'Mood & posters',decks:'Decks',type:'Typography',icons:'Icons',sections:'Sections',flows:'App flows',tools:'Tools',rules:'Rules',more:'More lists'};
+  $('#tabs').innerHTML=tabs.map(t=>`<button class="tab" role="tab" id="tab-${t.id}" data-tab="${t.id}" aria-selected="${t.id===active}">${short[t.id]||t.name}<span class="n">${t.n}</span></button>`).join('');
+}
+function card(r){
+  const on=saved.has(r.id);
+  const watch=r.t?`<a class="chip" href="${VID}&t=${r.t}s" target="_blank" rel="noopener" title="Watch this part of the video">${ICON.play}${fmt(r.t)}</a>`:'';
+  const thumb=r.img
+    ?`<img src="shots/${r.img}.webp" alt="Screenshot of ${esc(r.n)}" width="720" height="450" loading="lazy" decoding="async">`
+    :`<div class="thumb-fallback"><div><span>${esc(r.n)}</span><small>${esc(host(r.u))}</small></div></div>`;
+  return `<article class="card" id="r-${r.id}">
+    <a class="thumb" href="${r.u}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">${thumb}</a>
+    <div class="card-body">
+    <div class="card-top">
+      <div class="card-title"><h3>${esc(r.n)}</h3><span class="domain">${esc(host(r.u))}</span></div>
+      <button class="save" data-save="${r.id}" aria-pressed="${on}" aria-label="${on?'Remove from saved':'Save'} ${esc(r.n)}">${on?ICON.starF:ICON.star}</button>
+    </div>
+    <p class="what">${esc(r.w)}</p>
+    <p class="use"><b>How the video uses it</b>${esc(r.h)}</p>
+    <div class="card-foot"><span class="id">${r.id}</span><div class="links">${watch}<a class="chip go" href="${r.u}" target="_blank" rel="noopener">Open${ICON.ext}</a></div></div>
+    </div>
+  </article>`;
+}
+function matches(r){
+  if(!query)return true;
+  const g=GROUPS.find(x=>x.id===r.g);
+  return (r.n+' '+r.w+' '+r.h+' '+r.u+' '+g.name).toLowerCase().includes(query);
+}
+function renderGroups(){
+  let html='';
+  const list=GROUPS.filter(g=>active==='all'||active==='saved'||g.id===active);
+  for(const g of list){
+    const items=R.filter(r=>r.g===g.id&&matches(r)&&(active!=='saved'||saved.has(r.id)));
+    if(!items.length)continue;
+    html+=`<section class="group" id="g-${g.id}">
+      <div class="group-head"><span class="group-code">${g.code} · ${String(GROUPS.indexOf(g)+1).padStart(2,'0')}/${GROUPS.length}</span><h2>${esc(g.name)}</h2><span class="group-count">${items.length} ${items.length===1?'resource':'resources'}</span><p class="group-desc">${esc(g.desc)}</p></div>
+      <div class="grid">${items.map(card).join('')}</div></section>`;
+  }
+  if(!html){
+    html=active==='saved'&&!query
+      ?`<div class="empty"><strong>Nothing saved yet</strong>Tap the star on any card to keep it here for your next brainstorm.</div>`
+      :`<div class="empty"><strong>No matches for “${esc(query)}”</strong>Try a broader word like “font”, “logo” or “animation”.</div>`;
+  }
+  $('#groups').innerHTML=html;
+}
+function render(){renderTabs();renderGroups()}
+
+$('#tabs').addEventListener('click',e=>{
+  const b=e.target.closest('[data-tab]');if(!b)return;
+  active=b.dataset.tab;store.set('spark-tab',active);
+  try{history.replaceState(null,'','#'+active)}catch(err){}
+  render();
+  const top=$('#library').getBoundingClientRect().top+scrollY-60;
+  if(scrollY>top)scrollTo({top});
+});
+$('#groups').addEventListener('click',e=>{
+  const b=e.target.closest('[data-save]');if(!b)return;
+  const id=b.dataset.save;
+  if(saved.has(id)){saved.delete(id);toast('Removed from saved')}else{saved.add(id);toast('Saved')}
+  store.set('spark-saved',[...saved]);
+  if(active==='saved')renderGroups();
+  else{const on=saved.has(id);b.setAttribute('aria-pressed',on);b.innerHTML=on?ICON.starF:ICON.star}
+  renderTabs();
+});
+$('#q').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderGroups()});
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&!/input|textarea/i.test(document.activeElement.tagName)){e.preventDefault();$('#q').focus()}
+  if(e.key==='Escape'&&document.activeElement===$('#q')){$('#q').value='';query='';renderGroups();$('#q').blur()}
+});
+$('#surprise').addEventListener('click',()=>{
+  query='';$('#q').value='';active='all';render();
+  const pool=R.filter(r=>r.g!=='more');
+  const r=pool[Math.floor(Math.random()*pool.length)];
+  const el=document.getElementById('r-'+r.id);
+  el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+  el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
+  toast('Try '+r.n+' today');
+});
+
+$('#promptList').innerHTML=PROMPTS.map((p,i)=>`<div class="prompt"><div class="prompt-head"><h3>${esc(p.t)}</h3><button class="copy" type="button" data-copy="${i}">Copy</button></div><pre id="p-${i}">${esc(p.p)}</pre></div>`).join('');
+$('#promptList').addEventListener('click',e=>{
+  const b=e.target.closest('[data-copy]');if(!b)return;
+  const text=PROMPTS[+b.dataset.copy].p;
+  const done=()=>{b.textContent='Copied';b.classList.add('done');setTimeout(()=>{b.textContent='Copy';b.classList.remove('done')},1600)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('p-'+b.dataset.copy));const s=getSelection();s.removeAllRanges();s.addRange(r);toast('Text selected. Press Ctrl+C to copy')};
+  try{navigator.clipboard.writeText(text).then(done,fallback)}catch(err){fallback()}
+});
+
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),1800)}
+render();
+</script>
+
+  </body></html>
