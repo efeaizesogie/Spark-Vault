@@ -28,14 +28,15 @@
     <main id="top">
       <section class="hero wrap">
         <div class="eyebrow"><span class="dot"></span><span id="total">0
-            resources</span><span>·</span><span>10 kinds of
+            resources</span><span>·</span><span id="kinds">kinds of
             inspiration</span></div>
         <h1>Steal like a <span class="hl">designer.</span></h1>
         <p class="lede">Every resource from Jack Roberts’ <a
             href="https://www.youtube.com/watch?v=IYNAyRkUsjI" target="_blank"
             rel="noopener">15 Claude Design hacks</a>, sorted by the kind of
-          spark it gives you. Each card says what the site is, how the video
-          uses it, and jumps to that moment in the video.</p>
+          spark it gives you, plus the best 3D, motion and component sites
+          found since. Each card says what the site is and how to use it, and
+          the video ones jump to that moment in the video.</p>
         <div class="toolbar">
           <label class="search" for="q">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
@@ -137,6 +138,9 @@ const GROUPS=[
  {id:'type',code:'TYP',name:'Typography',desc:'The quickest upgrade for any AI design. Find what top sites are using, identify a font from a screenshot, or download a free one.'},
  {id:'icons',code:'ICO',name:'Icons & illustration',desc:'Replace long explanations with a clear icon or illustration in a consistent style.'},
  {id:'sections',code:'SEC',name:'Website sections',desc:'Galleries of single page parts. Pick the best example of each section and assemble your page from them.'},
+ {id:'sites',code:'SIT',name:'Award-winning websites',desc:'Whole sites judged by other designers. Use them to set the overall bar and direction before you design any single section.'},
+ {id:'components',code:'CMP',name:'Animated UI components',desc:'Copy-paste React components with motion already built in. Point Claude at one instead of describing an effect from scratch.'},
+ {id:'3d',code:'3DX',name:'3D, shaders & scroll sites',desc:'The engines, experiments and prompt libraries behind 3D scenes, shader effects and scroll-driven pages.'},
  {id:'flows',code:'FLW',name:'Real app & site flows',desc:'Full screen-by-screen captures of the best products, so you can see how the leaders handle a whole journey.'},
  {id:'tools',code:'TLS',name:'Tools & skills that make it',desc:'The tools and Claude skills the video uses to turn inspiration into finished images, video, editable posts and polished copy.'},
  {id:'rules',code:'RUL',name:'Principles & writing rules',desc:'Rules to check your work against: is it simple enough, and does the copy sound like a person wrote it?'},
@@ -183,6 +187,16 @@ const R=[
  {g:'tools',n:'Design Loop skill',u:'https://www.skool.com/ai-automation-vault/claude-design-10000-websites-no-ai-slop',t:1264,w:'A Claude skill that creates a critic agent to check output against your reference until they match.',h:'Attach a gold-standard design and ask Claude to recreate it with your own text and brand.'},
  {g:'tools',n:'Slop Monster',u:'https://github.com/ItsssssJack/SlopMonster',t:1605,w:'A free repo that combines the best anti-AI-writing rules, including checks for sales and marketing copy.',h:'Ask Claude to run all your copy through it, or turn it into a skill you can call by name.'},
  {g:'tools',n:'Free prompt vault',u:'https://bit.ly/3RNNDLa',t:60,w:'Jack’s free pack of the Claude Design prompts and skills used in the video, including the five-agent design check.',h:'Copy a section’s prompt to repeat a hack, like the motion or brand guideline prompt.'},
+ // from the "10 wild places" list (src:'x' = not from the video)
+ {g:'sites',src:'x',n:'Awwwards',u:'https://www.awwwards.com',w:'Daily awards for the best websites, voted on by a jury of designers, with each winner scored for design, usability and creativity.',h:'Open Site of the Day, pick a winner that matches your mood, and give Claude its screenshot as the direction for your page.'},
+ {g:'sites',src:'x',n:'Godly',u:'https://godly.website',w:'A hand-picked gallery of websites with serious craft, filterable by style and type, many with video previews.',h:'Browse by type (portfolio, SaaS, agency) to find two or three references before you prompt.'},
+ {g:'components',src:'x',n:'21st.dev',u:'https://21st.dev',w:'A community library of React and shadcn/ui components, templates and themes you can copy straight into a project.',h:'Find a hero, pricing table or button you like and paste its code or link into Claude as the starting point.'},
+ {g:'components',src:'x',n:'Aceternity UI',u:'https://ui.aceternity.com',w:'Animated React and Tailwind components and blocks with big visual impact, built for landing pages.',h:'Use it for show-stopping effects like spotlights, beams and 3D cards, then ask Claude to restyle them to your brand.'},
+ {g:'components',src:'x',n:'Magic UI',u:'https://magicui.design',w:'Free, open-source animated components built with React, Tailwind and Motion, made to pair with shadcn/ui.',h:'Grab marquees, number tickers and animated text for the premium micro-interactions in your design.'},
+ {g:'3d',src:'x',n:'ScrollTide',u:'https://scrolltide.co',w:'A library of scroll-driven site templates, sections and shaders, each with a prompt and full source code. A few are free; the full library is a paid subscription.',h:'Copy a template’s prompt into Claude or Cursor to get a working scroll-animated Next.js site, then edit it until it’s yours.'},
+ {g:'3d',src:'x',n:'Three.js',u:'https://threejs.org',w:'The JavaScript library behind most 3D on the web. Its examples page shows what is possible in the browser.',h:'Find an example close to your idea and ask Claude to build that scene with Three.js for your hero.'},
+ {g:'3d',src:'x',n:'Shadertoy',u:'https://www.shadertoy.com',w:'A community gallery of GPU shader experiments: generated textures, fluids, lighting and abstract motion.',h:'Use a shader as an animated background. Share its link and ask Claude to port it into your page.'},
+ {g:'tools',src:'x',n:'Lovable',u:'https://lovable.dev',w:'An AI app builder that turns a prompt into a working web app you can edit and deploy.',h:'Take a design you made with Claude and use Lovable to turn it into a working product.'},
  // rules
  {g:'rules',n:'Don’t Make Me Think',u:'https://sensible.com/dont-make-me-think/',t:1529,w:'Steve Krug’s book on usability. Pages should be understood at a glance, with no effort from the visitor.',h:'Ask for several versions of a design and keep the one that communicates most simply.'},
  {g:'rules',n:'ASD-STE100',u:'https://www.asd-ste100.org',t:1724,w:'Simplified Technical English from aerospace: about 900 approved words, active voice, one instruction per sentence.',h:'Tell Claude to talk to you in this style and to rewrite your copy to the standard.'},
@@ -224,7 +238,8 @@ const IMG={'LottieFiles':'lottiefiles','Transitions.dev':'transitions','60fps':'
  'Typewolf':'typewolf','Fonts In Use':'fontsinuse','WhatTheFont':'whatthefont','Fontshare':'fontshare','Icons8':'icons8',
  'Navbar Gallery':'navbar','Footer Design':'footer','CTA Gallery':'cta','404s Design':'404s','Unsection':'unsection','Bento Grids':'bento',
  'Mobbin':'mobbin','Refero':'refero','Claude Design':'claude','Higgsfield':'higgsfield','Design Loop skill':'designloop','Slop Monster':'slopmonster',
- 'Free prompt vault':'vault','Don’t Make Me Think':'dmmt','ASD-STE100':'ste','Jack’s 40 favourite design sites':'jack40','Gallery list by @iamtanzil_':'tanzil'};
+ 'Free prompt vault':'vault','Don’t Make Me Think':'dmmt','ASD-STE100':'ste','Jack’s 40 favourite design sites':'jack40','Gallery list by @iamtanzil_':'tanzil',
+ 'Awwwards':'awwwards','Godly':'godly','21st.dev':'21st','Aceternity UI':'aceternity','Magic UI':'magicui','ScrollTide':'scrolltide','Three.js':'threejs','Lovable':'lovable'};
 R.forEach(r=>{r.img=IMG[r.n]});
 
 let saved=new Set(store.get('spark-saved',[]));
@@ -234,10 +249,11 @@ let query='';
 
 const $=s=>document.querySelector(s);
 $('#total').textContent=R.length+' resources';
+$('#kinds').textContent=GROUPS.length+' kinds of inspiration';
 
 function renderTabs(){
   const tabs=[{id:'all',name:'All',n:R.length},...GROUPS.map(g=>({id:g.id,name:g.name.split(' & ')[0].replace('Real app','App flows').replace('Tools','Tools').replace('Principles','Principles'),n:R.filter(r=>r.g===g.id).length})),{id:'saved',name:'Saved',n:saved.size}];
-  const short={motion:'Motion',brand:'Brand',mood:'Mood & posters',decks:'Decks',type:'Typography',icons:'Icons',sections:'Sections',flows:'App flows',tools:'Tools',rules:'Rules',more:'More lists'};
+  const short={motion:'Motion',brand:'Brand',mood:'Mood & posters',decks:'Decks',type:'Typography',icons:'Icons',sections:'Sections',sites:'Great sites',components:'Components','3d':'3D & shaders',flows:'App flows',tools:'Tools',rules:'Rules',more:'More lists'};
   $('#tabs').innerHTML=tabs.map(t=>`<button class="tab" role="tab" id="tab-${t.id}" data-tab="${t.id}" aria-selected="${t.id===active}">${short[t.id]||t.name}<span class="n">${t.n}</span></button>`).join('');
 }
 function card(r){
@@ -254,7 +270,7 @@ function card(r){
       <button class="save" data-save="${r.id}" aria-pressed="${on}" aria-label="${on?'Remove from saved':'Save'} ${esc(r.n)}">${on?ICON.starF:ICON.star}</button>
     </div>
     <p class="what">${esc(r.w)}</p>
-    <p class="use"><b>How the video uses it</b>${esc(r.h)}</p>
+    <p class="use"><b>${r.src?'How to use it':'How the video uses it'}</b>${esc(r.h)}</p>
     <div class="card-foot"><span class="id">${r.id}</span><div class="links">${watch}<a class="chip go" href="${r.u}" target="_blank" rel="noopener">Open${ICON.ext}</a></div></div>
     </div>
   </article>`;
